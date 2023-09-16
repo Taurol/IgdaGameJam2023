@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://db5vkni1v14bk"]
+
+[ext_resource type="Texture2D" uid="uid://c2xby8t52xb4l" path="res://icon.svg" id="1_iirrl"]
+[ext_resource type="PackedScene" uid="uid://bl2wh0vwo6ftn" path="res://Assets/Player/Player.tscn" id="2_g4etp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiar5"]
+size = Vector2(128, 128)
+
+[node name="Test" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(1137, 536)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_aiar5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+texture = ExtResource("1_iirrl")
+
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2(463, 626)
+scale = Vector2(12.062, -0.436347)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+shape = SubResource("RectangleShape2D_aiar5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor2"]
+texture = ExtResource("1_iirrl")
+
+[node name="Floor3" type="StaticBody2D" parent="."]
+position = Vector2(-68, 535)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
+shape = SubResource("RectangleShape2D_aiar5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor3"]
+texture = ExtResource("1_iirrl")
+
+[node name="Floor4" type="StaticBody2D" parent="."]
+position = Vector2(850, 538)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor4"]
+shape = SubResource("RectangleShape2D_aiar5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor4"]
+texture = ExtResource("1_iirrl")
+
+[node name="Player" parent="." instance=ExtResource("2_g4etp")]
+position = Vector2(176, 137)
+jump_height = 5.0
+jump_time_to_peak = 2.0
+jump_time_to_descent = 2.0
